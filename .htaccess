@@ -1,0 +1,10 @@
+   RewriteEngine On
+   RewriteBase /myurl/
+   RewriteCond %{REQUEST_URI} !^(index\.php|images|robots\.txt)
+
+   
+    
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+     
